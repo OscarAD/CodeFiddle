@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>CodePlayer</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="style.css">
+      <script src="jq/jquery.js" charset="utf-8"></script>
+      <script src="plugins/codemirrorFrame/lib/codemirror.js"></script>
+      <link rel="stylesheet" href="plugins/codemirrorFrame/lib/codemirror.css">
+        <script src="plugins/codemirrorFrame/mode/xml/xml.js"></script>
+        <script src="plugins/codemirrorFrame/mode/css/css.js"></script>
+        <script src="plugins/codemirrorFrame/mode/javascript/javascript.js"></script>
+        <link rel="stylesheet" href="plugins/codemirrorFrame/theme/night.css">
+        </head>
+        <body>
+          <div id="container">
+            <div id="titlebar" class="gradientBackground">
+              <div id="title">
+        CodeFiddle
+      </div>
+              <div id="runDiv">
+                <button id="run"></button>
+              </div>
+              <div id="menu">
+                <ul>
+                  <li id="selectorHTML" class="selector selected" name="html" style="border:2px solid #E44D26">HTML</li>
+                  <li id="selectorCSS" class="selector" name="css" style="border:2px solid #379AD6">CSS</li>
+                  <li id="selectorJS" class="selector" name="js" style="border:2px solid #F0DB4F">JS</li>
+                  <li id="selectorRESULTS" class="selector selected" name="result" style="border:2px solid green">RESULT</li>
+                </ul>
+              </div>
+            </div>
+            <div class="break"></div>
+            <div class="codecontainer" id="htmlContainer">
+              <div class="containerTitle">
+                <img class="clearButton" id="htmlClear" src="images/html.png" alt="">
+                </div>
+                <!--HTML textarea with spellcheck off -->
+                <textarea class="code" id="html" spellcheck="false"></textarea>
+              </div>
+              <div class="codecontainer" id="cssContainer">
+                <div class="containerTitle">
+                  <img class="clearButton" id="cssClear" src="images/css.png" alt="">
+                  </div>
+                  <!--CSS textarea with spellcheck off -->
+                  <textarea class="code" id="css" spellcheck="false"></textarea>
+                </div>
+                <div class="codecontainer" id="jsContainer">
+                  <div class="containerTitle">
+                    <img class="clearButton" id="jsClear" src="images/java.png" alt="">
+                    </div>
+                    <!--JS textarea with spellcheck off -->
+                    <textarea class="code" id="js" spellcheck="false"></textarea>
+                  </div>
+                  <div class="codecontainer" id="resultContainer">
+                    <div class="resultContainer">
+                      <iframe id="resultFrame"></iframe>
+                    </div>
+                  </div>
+                </div>
+                <script type="text/javascript">
+    var htmlCodeMirror = CodeMirror.fromTextArea(document.getElementById('html'), {
+      lineNumbers: true,
+      gutter: true,
+      lineWrapping: true,
+      mode: "xml",
+      theme: "night"
+    });
+
+
+    var cssCodeMirror = CodeMirror.fromTextArea(document.getElementById('css'), {
+      lineNumbers: true,
+      gutter: true,
+      lineWrapping: true,
+      mode: "css",
+      theme: "night"
+    });
+
+
+
+    var jsCodeMirror = CodeMirror.fromTextArea(document.getElementById('js'), {
+      lineNumbers: true,
+      gutter: true,
+      lineWrapping: true,
+      mode: "javascript",
+      theme: "night"
+    });
+  </script>
+                <script src="script.js" charset="utf-8"></script>
+              </body>
+            </html>
