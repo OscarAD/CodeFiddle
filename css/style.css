@@ -1,6 +1,6 @@
 @font-face {
 	font-family: 'amontillados';
-	src: url('font/Amontillados.woff2') format('woff2'), url('font/Amontillados.woff') format('woff');
+	src: url('../font/Amontillados.woff2') format('woff2'), url('font/Amontillados.woff') format('woff');
 }
 
 * {
@@ -141,7 +141,7 @@ background: linear-gradient(to left, #3D7EAA, #283048); /* W3C, IE 10+/ Edge, Fi
 	height: 45px;
 	position: relative;
 	border-radius: 50px;
-	background-image: url(images/arrow3.ico);
+	background-image: url(../images/arrow3.ico);
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
